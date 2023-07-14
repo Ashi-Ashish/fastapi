@@ -1,4 +1,4 @@
-name: Bu: ${{secrets.ild and Deploy Code
+name: Build and Deploy Code
 
 on: [push, pull_request]
   # or
