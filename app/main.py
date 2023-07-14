@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from .database import engine
@@ -24,6 +24,6 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 
 # request Get method url: "/"
-@app.get("/")
+@app.get("/", status_code=status.HTTP_200_OK)
 def root():
-    return {"message": "Hello World!!!!!!!!!!!!!!!!"}
+    return {"message": "Hello World!!!!!!!....!!!!!!!!!"}
